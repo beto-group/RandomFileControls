@@ -19,7 +19,7 @@
   <hr>
 </div>
 
-<img src="_RESOURCES/DATACORE/_DONE/RandomFileControls/assets/videos/preview.gif" alt="Random File Controls Walkthrough" width="100%">
+<img src="assets/videos/preview.gif" alt="Random File Controls Walkthrough" width="100%">
 
 <div align="center">
   <p>
@@ -80,7 +80,7 @@ The package exposes the following compiled files:
 
 | Static Mockup | Interactive IDE Viewport |
 | :---: | :---: |
-| ![Preview 1](_RESOURCES/DATACORE/_DONE/RandomFileControls/assets/image/preview_1.webp) | ![Walkthrough GIF](_RESOURCES/DATACORE/_DONE/RandomFileControls/assets/videos/preview.gif) |
+| ![Preview 1](assets/image/preview_1.webp) | ![Walkthrough GIF](assets/videos/preview.gif) |
 
 ---
 
