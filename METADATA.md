@@ -3,7 +3,7 @@ author: beto.group
 contributor: []
 version: 2.0.8
 id: random-file-controls-928
-name: RANDOM FILE CONTROLS
+name: RandomFileControls
 description: A comprehensive developer utility for batch file operations, advanced compilation, and vault management with an IDE-like interface.
 status: stable
 complexity: advanced
@@ -15,8 +15,8 @@ repository:
   - https://github.com/beto-group/RandomFileControls
 missing: []
 resources:
-  - assets/random_file_controls.webp
-  - assets/randomfilecontrols.clip.gif
+  - assets/image/preview_1.webp
+  - assets/videos/preview.gif
 type: DatacoreComponent
 target: Datacore
 security:

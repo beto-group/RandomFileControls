@@ -1,17 +1,33 @@
-# Contribution Guidelines
+# Contribution Guidelines — Random File Controls
 
-We welcome contributions to this Datacore component!
+Welcome! This component is part of the BetoOS Datacore library. Please adhere to the following architectural standards.
 
-## Local Development Workflow
+## Codebase Architecture
 
-1. This component runs locally within the Datacore environment.
-2. Ensure you have the `Datacore` plugin active.
-3. Make changes in `src/App.jsx` or `src/index.jsx`.
-4. The component uses an HMR polling daemon. Trigger a hot reload by modifying `data/mcp_commands.json` (e.g., set `"action": "reload"` and `"executed": false`).
+The module utilizes a split-file structure to guarantee legibility, testability, and isolated execution scopes:
 
-## Pull Request Process
+```text
+RandomFileControls/
+├── RANDOM FILE CONTROLS.md # Obsidian entry point
+├── METADATA.md            # Component manifest
+├── README.md              # Documentation
+├── CONTRIBUTION.md        # This file
+├── LICENSE.md             # MIT license
+├── data/
+│   └── mcp_commands.json  # External watch/reload trigger
+├── assets/
+│   ├── image/
+│   │   └── preview_1.webp # Static preview image
+│   └── videos/
+│       └── preview.gif    # Interactive walkthrough GIF
+└── src/
+    ├── index.jsx          # Dynamic bootstrapper and reload daemon
+    └── App.jsx            # Main coordinator and IDE layout
+```
 
-1. Ensure the code is properly formatted and adheres to BetoOS styling (no emojis in UI, use Obsidian CSS variables).
-2. Do not commit any personal environment paths or secrets (run "Beto Clean").
-3. Update `README.md` if the component's features or directory structure change.
-4. Submit your PR against the `main` branch.
+## Developer Standards
+
+1. **Strict Zero Emojis**: All UI elements, buttons, headers, and control indicators must use Lucide vector icons or plain text. Emojis are reserved strictly for documentation.
+2. **Path Safety**: Do not hardcode absolute path strings (e.g. `/Volumes/` or `file:///`). Always resolve vault directories dynamically relative to `folderPath` passed from the loader.
+3. **Theme Parity**: Ensure that color choices reference CSS variables (e.g. `var(--interactive-accent)`) for native Obsidian compatibility.
+4. **HMR Command System**: To force a code reload or command watch directory path change remotely via MCP agents, write the reload payload to `data/mcp_commands.json`.
